@@ -1,0 +1,59 @@
+﻿@model RegisterDto
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SignalR Restoran Kayıt</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="~/colorlib-regform-32/css/nunito-font.css">
+	<!-- Main Style Css -->
+	<link rel="stylesheet" href="~/colorlib-regform-32/css/style.css" />
+	<style>
+		.form-row a {
+			color: #168EBF;
+			text-decoration: none;
+		}
+
+			.form-row a:hover {
+				color: #1271A6;
+				text-decoration: underline;
+			}
+	</style>
+</head>
+<body class="form-v6">
+	<div class="page-content" style="height:1000px">
+		<div class="form-v6-content">
+			<div class="form-left" style="width:100%">
+				<img src="~/colorlib-regform-32/images/Sauce1.jpg" alt="form" style="width:100%; height:100%">
+			</div>
+			<form class="form-detail" method="post" style="padding:30px">
+				<h2 style="margin: 20px 0 20px 0">Yeni Kullanıcı Kaydı</h2>
+				<div class="form-row">
+					<input type="text" id="full-name" style="margin-bottom:20px" class="input-text" placeholder="Adınız" required asp-for="Name">
+				</div>
+				<div class="form-row">
+					<input type="text" id="full-name" style="margin-bottom:20px" class="input-text" placeholder="Soyadınız" required asp-for="Surname">
+				</div>
+				<div class="form-row">
+					<input type="text" id="full-name" style="margin-bottom:20px" class="input-text" placeholder="Kullanıcı Adınız" required asp-for="Username">
+				</div>
+				<div class="form-row">
+					<input type="email" id="your-email" style="margin-bottom:20px" class="input-text" placeholder="Email Adresiniz" asp-for="Mail">
+				</div>
+				<div class="form-row">
+					<input type="password" id="password" style="margin-bottom:20px" class="input-text" placeholder="Şifreniz" required asp-for="password">
+					<a href="/Login/Index/">Bir Hesabınız Varmı? Hemen Giriş Yapın</a>
+				</div>
+				<div class="form-row-last">
+					<input style ="margin-bottom:20px" type="submit" name="register" class="register" value="Kayıt Ol">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

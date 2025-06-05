@@ -1,0 +1,64 @@
+﻿@model CreateNotificationDto
+@{
+    ViewData["Title"] = "CreateNotification";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Bildirim İşlemleri</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Yeni Bildirim Girişi</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="categoryName">Bildirim Türü</label>
+                                <select class="form-control nice-select wide" asp-for="Type">
+                                    <option value="" disabled selected>
+                                        Bildirim Türü
+                                    </option>
+                                    <option value="notif-icon notif-primary">
+                                        Yeni Rezervasyon
+                                    </option>
+                                    <option value="notif-icon notif-success">
+                                        Yeni Yorumunuz Var
+                                    </option>
+                                    <option value="notif-icon notif-danger">
+                                        Yeni Sipariş Var
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="FooterDescription">Bildirim İkonu</label>
+                                <select class="form-control nice-select wide" asp-for="Icon">
+                                    <option value="" disabled selected>
+                                        Bildirim Türü
+                                    </option>
+                                    <option value="la la-user-plus">
+                                        Yeni Rezervasyon
+                                    </option>
+                                    <option value="la la-comment">
+                                        Yeni Yorumunuz Var
+                                    </option>
+                                    <option value="la la-heart">
+                                        Yeni Sipariş Var
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Mail">Açıklama</label>
+                                <input type="text" class="form-control" asp-for="Description" id="Mail">
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <button class="btn btn-primary">Bildirimi Ekle</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
